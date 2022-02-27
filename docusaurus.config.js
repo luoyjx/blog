@@ -6,6 +6,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
+  onBrokenLinks: 'warn',
   themeConfig: {
     navbar: {
       title: 'yanjixiong 的 blog',
