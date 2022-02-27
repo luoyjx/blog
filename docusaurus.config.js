@@ -8,6 +8,11 @@ module.exports = {
   projectName: 'blog', // Usually your repo name.
   onBrokenLinks: 'warn',
   themeConfig: {
+    prism: {
+      additionalLanguages: ['java', 'php'],
+      theme: require('prism-react-renderer/themes/github'),
+      darkTheme: require('prism-react-renderer/themes/dracula'),
+    },
     navbar: {
       title: '演技熊随想',
       // logo: {
