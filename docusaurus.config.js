@@ -1,21 +1,31 @@
 module.exports = {
-  title: 'My Site',
+  title: '演技熊随想',
   tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://blognew.gaoqixhb.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: '', // Usually your GitHub org/user name.
+  projectName: 'blog', // Usually your repo name.
   onBrokenLinks: 'warn',
   themeConfig: {
     navbar: {
-      title: 'yanjixiong 的 blog',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
+      title: '演技熊随想',
+      // logo: {
+      //   alt: 'My Site Logo',
+      //   src: 'img/gaoqi_blog_logo.png',
+      // },
       items: [
         // {to: 'blog', label: 'Blog', position: 'left'},
+        {
+          label: '标签',
+          to: 'tags',
+          position: 'right',
+        },
+        {
+          label: '归档',
+          to: 'archive',
+          position: 'right',
+        },
         {
           href: 'https://github.com/luoyjx',
           label: 'GitHub',
@@ -30,16 +40,8 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/luoyjx',
             },
           ],
         },
@@ -52,12 +54,12 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/luoyjx',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus.`,
     },
   },
   presets: [
