@@ -6,7 +6,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: '', // Usually your GitHub org/user name.
   projectName: 'blog', // Usually your repo name.
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'ignore',
   themeConfig: {
     prism: {
       additionalLanguages: ['java', 'php'],
@@ -71,8 +71,14 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
+        docs: false,
         blog: {
+          blogSidebarTitle: '全部博文',
+          blogSidebarCount: 0,
+          postsPerPage: 20,
           showReadingTime: true,
+          readingTime: ({content, frontMatter, defaultReadingTime}) =>
+            defaultReadingTime({content, options: {wordsPerMinute: 300}}),
           path: './blog',
           routeBasePath: '/'
         },
