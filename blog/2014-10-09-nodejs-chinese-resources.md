@@ -1,10 +1,10 @@
 ---
-slug: 5436209f9e703d0061c53836
+slug: nodejs-chinese-resources
 title: node.js中文资料导航
 tags: [node.js]
 ---
 
-## Node.js 
+## Node.js
 
 * [HomePage][0]
 * [Node官网七牛镜像][1]
@@ -20,7 +20,7 @@ tags: [node.js]
 * [Node.js http 管道拒绝服务漏洞][11]
 * [Node.js高级编程][12]
 
-## 业界新闻 
+## 业界新闻
 
 * [看eBay如何评价他们的Node.js首次尝鲜][13]
 * [程序员如何说服老板采用Node.js？][14]
@@ -29,7 +29,7 @@ tags: [node.js]
 * [Kraken：改变PayPal开发文化的Node.js框架][17]
 * [Groupon抛弃Rails，转向Node.js][18]
 
-## 经验分享 
+## 经验分享
 
 * [SDCC讲师专访：淘宝朴灵谈Node.js][19]
 * [Node.js的核心与红利][20]
@@ -42,11 +42,11 @@ tags: [node.js]
 * [沪 JS 国内讲师的 PPT 收集][27]
 * [给Node.js新手的7条小建议][28]
 
-## 模块导航 
+## 模块导航
 
-### web服务器框架 
+### web服务器框架
 
-#### 最流行的web框架Express 
+#### 最流行的web框架Express
 
 * [HomePage][29]
 * [加装涡轮，提速expressjs][30]
@@ -56,81 +56,81 @@ tags: [node.js]
 * [Connect架构初探 for 新手][34]
 * [使用 Express + Socket.IO 搭建多人聊天室][35]
 
-#### 国人开源web框架rrestjs 
+#### 国人开源web框架rrestjs
 
 * [HomePage][36]
 
-#### 实时应用web框架meteor 
+#### 实时应用web框架meteor
 
 * [HomePage][37]
 * [Meteor-DDP翻译][38]
 * [Meteor 非官方中文文档（不包含API部分）][39]
 * [基于meteor开发的开源项目列表][40]
 
-#### 基于Express的实时MVC框架Sails 
+#### 基于Express的实时MVC框架Sails
 
 * [HomePage][41]
 
-### Mysql 老牌关系型数据库 
+### Mysql 老牌关系型数据库
 
 * [HomePage][42]
 * [mysql处理BIGINT里面的一个坑][43]
 * [使用node-mysql中的连接池][44]
 * [mysql自动断开解决办法][45]
 
-### Mongodb 
+### Mongodb
 
 * [node-mongodb-native][46]
 * [mongoose][47]
 * [如何使用mongoose对一个100万+的mongodb的表进行遍历操作][48]
 * [[技术讨论]mongodb驱动的正确使用方法][49]
 
-### 异步流程处理 
+### 异步流程处理
 
-#### async 
+#### async
 
 * [HomePage][50]
 * [Async中文详解][51]
 
-#### eventproxy 
+#### eventproxy
 
 * [HomePage][52]
 
-#### Q Promise 异步模式 
+#### Q Promise 异步模式
 
 * [HomePage][53]
 * [在Node.js 中用 Q 实现Promise – Callbacks之外的另一种选择][54]
 
-### Redis 内存键值数据库 
+### Redis 内存键值数据库
 
 * [node_redis][55]
 
-### Pomelo 网易出品的网页游戏框架 
+### Pomelo 网易出品的网页游戏框架
 
 * [pomelo][56]
 * [Infoq深入浅出node.js游戏服务器开发][57]
 * [官网wiki][58]
 * [响应非常迅速的官方论坛][59]
 
-### 字符格式 
+### 字符格式
 
 * [開源的簡繁轉換庫OpenCC支持Node.js了][60]
 * [iconv-lite扩展：增加big5/shift-jis支持][61]
 
-### 网页模板引擎 
+### 网页模板引擎
 
 * [WEB模板jade、ejs、handlebars 万行代码解释效率比较，jade完败][62]
 * [Javascript模板引擎性能对比及几点优化][63]
 * [让 ejs 更加快 | Let ejs faster with options._with = false][64]
 * [EJS快速入门教程][65]
 
-### 图片处理 
+### 图片处理
 
 * [Nodejs跨平台轻量级图片编解码库【增加Jpeg质量调整】][66]
 * [node-ccap模块生成captcha验证码][67]
 * [使用nodejs将html5 canvas base64编码图片保存为文件][68]
 
-### 运维 
+### 运维
 
 * [Node.js 异步异常的处理与domain模块解析][69]
 * [关于XSS（跨站脚本攻击）和CSRF（跨站请求伪造）][70]
@@ -139,13 +139,13 @@ tags: [node.js]
 * [告别node-forever,拥抱PM2][73]
 * [阿里云主机Nginx下配置NodeJS、Express和Forever][74]
 
-## 性能测试 
+## 性能测试
 
 * [阿里出品的node.js调研与服务性能测试][75]
 * [多核单服务器各种配置和业务压力下的node.js性能测试][76]
 * [巅峰对决：node.js和php性能测试][77]
 
-## 活跃开发者（排名不分先后） 
+## 活跃开发者（排名不分先后）
 
 * [朴灵][78]
 * [dead_horse/死马][79]
@@ -155,9 +155,9 @@ tags: [node.js]
 * [shiedman][83]
 * [jiyinyiyong][84]
 
-## 开源案例 收集Cnode的开源项目 
+## 开源案例 收集Cnode的开源项目
 
-### 社交类 
+### 社交类
 
 * [Cnodejs 最活跃的Node.js社区][85]
 * [晓知 个人博客][86]
@@ -166,7 +166,7 @@ tags: [node.js]
 * [Yblog 博客程序][89]
 * [noderce博客程序][90]
 
-### 工具类 
+### 工具类
 
 * [wechat微信中间件][91]
 * [深度遍历目录/列出目录下所有文件][92]
@@ -177,7 +177,7 @@ tags: [node.js]
 * [豆瓣SDK][97]
 * [数字与字符串转换模块baseN，支持2~62间任意进制转换][98]
 
-## 商业应用 
+## 商业应用
 
 * [淘宝数据魔方][99]
 * [淘宝指数][100]

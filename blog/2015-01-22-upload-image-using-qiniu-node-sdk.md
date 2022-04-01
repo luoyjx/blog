@@ -1,18 +1,18 @@
 ---
-slug: 54c1082bec410bcc71ec0c91
-title: 折腾七牛Node-sdk的图片上传
+slug: upload-image-using-qiniu-node-sdk
+title: 折腾七牛 Node-sdk 的图片上传
 tags: [node.js ,七牛]
 ---
 
- 之前是在sdk下面的评论看到&nbsp;[fengmk2][0]&nbsp;大神的qn三方sdk，结果用着用着，我本地的可以上传，但是放到阿里云上就传不了了。 
+ 之前是在sdk下面的评论看到&nbsp;[fengmk2][0]&nbsp;大神的qn三方sdk，结果用着用着，我本地的可以上传，但是放到阿里云上就传不了了。
 
-今天回来直接用了官方的sdk，可以了。 
+今天回来直接用了官方的sdk，可以了。
 
-分享下过程： 
+分享下过程：
 
-官方文档 ：http://developer.qiniu.com/docs/v6/sdk/nodejs-sdk.html#sdk-usage 
+官方文档 ：`http://developer.qiniu.com/docs/v6/sdk/nodejs-sdk.html#sdk-usage`
 
-这里是官方的nodejs sdk的上传文档了。 
+这里是官方的nodejs sdk的上传文档了。
 
  因为我的富文本编辑器是用的kindediter，有个上传的UI，于是我就懒得去改界面了。
 
@@ -23,7 +23,7 @@ tags: [node.js ,七牛]
  我先把文件上传到业务服务器（就是我的服务器）之后，再来读二级制流上传到七牛服务器去。
 
  直接贴代码吧：
-
+```js
     /**
      * 上传请求
      * @param req
@@ -76,8 +76,9 @@ tags: [node.js ,七牛]
             });
         }
     };
+```
 
-然后在文本编辑器中就可以看到你上传的图片了。 
+然后在文本编辑器中就可以看到你上传的图片了。
 
  顺便推荐一下，七牛是注册后上传手持身份证照，可以变成标准用户。
 
