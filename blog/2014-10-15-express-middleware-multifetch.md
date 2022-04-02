@@ -4,19 +4,19 @@ title: express 批量请求合并中间件 multifetch
 tags: [express ,node.js]
 ---
 
-Express中间件可以进行内部批量GET请求。它允许客户端发送一个HTTP请求，可以在应用程序中获取多个JSON的资源，而没有进行任何多余的请求。&nbsp;
+Express中间件可以进行内部批量GET请求。它允许客户端发送一个HTTP请求，可以在应用程序中获取多个JSON的资源，而没有进行任何多余的请求。
 
-NPM安装multifetch&nbsp;
+NPM安装multifetch
 
 ```shell
 npm install multifetch
 ```
 
-开发和测试的node版本为0.10。&nbsp;
+开发和测试的node版本为0.10。
 
-用法&nbsp;
+用法
 
-它可以不使用任何配置。&nbsp;
+它可以不使用任何配置。
 ```js
 var multifetch = require('multifetch');
 var express = require('express');
@@ -36,7 +36,7 @@ app.listen(8080);
 ```
 
 
-执行GET请求/api/multifetch?user=/api/user，将返回用户和一些元数据信息。查询参数应该有一个资源的名称作为键和相对路径的值。该路径可以有其自己的查询，只要它的正确编码。此外，服务端必须返回application/json或text/json（有或没有字符编码）的Content-Type头，否则内容将被忽略。&nbsp;
+执行GET请求/api/multifetch?user=/api/user，将返回用户和一些元数据信息。查询参数应该有一个资源的名称作为键和相对路径的值。该路径可以有其自己的查询，只要它的正确编码。此外，服务端必须返回application/json或text/json（有或没有字符编码）的Content-Type头，否则内容将被忽略。
 
 ```js
 // Response JSON object
@@ -56,12 +56,12 @@ app.listen(8080);
 }
 ```
 
-这样我们就可以通过将它们添加到查询获取多个资源。如果我们有更多的路由的定义，这将是可行的。&nbsp;
+这样我们就可以通过将它们添加到查询获取多个资源。如果我们有更多的路由的定义，这将是可行的。
 ```shell
 GET /api/multifetch?user=/api/user&amp;albums=/api/users/user_1/albums&amp;files=/api/files
 ```
 
-响应将包含如上所述的所有资源。&nbsp;
+响应将包含如上所述的所有资源。
 
 ```js
 {
@@ -85,9 +85,9 @@ GET /api/multifetch?user=/api/user&amp;albums=/api/users/user_1/albums&amp;files
 ```
 
 
-我们不进行任何额外的HTTP请求，而不是表达“内部路由是用来获取资源，并将它们发送回客户端。 JSON是以流传输到客户端。&nbsp;
+我们不进行任何额外的HTTP请求，而不是表达“内部路由是用来获取资源，并将它们发送回客户端。 JSON是以流传输到客户端。
 
-另外，也可以配置multifetch忽略一些查询参数，或执行任何内部路由之前提供函数回调，这样在内部请求时设置任何所需的头信息。比如，API访问令牌（cookie头默认设置）。&nbsp;
+另外，也可以配置multifetch忽略一些查询参数，或执行任何内部路由之前提供函数回调，这样在内部请求时设置任何所需的头信息。比如，API访问令牌（cookie头默认设置）。
 ```js
     // Ignore access_token and token in the query
     app.get('/api/multifetch', multifetch({ ignore: ['access_token', 'token'] }));
@@ -108,9 +108,9 @@ GET /api/multifetch?user=/api/user&amp;albums=/api/users/user_1/albums&amp;files
 ```
 
 
-如果request.body可用并且是一个JSON对象，资源也将包括来自这里（body对象与资源名称作为键和路径的值）。这可以通过使用post的路由和bodyParse中间件脱骨。&nbsp;
+如果request.body可用并且是一个JSON对象，资源也将包括来自这里（body对象与资源名称作为键和路径的值）。这可以通过使用post的路由和bodyParse中间件脱骨。
 
-要求非JSON的资源，在content-type不包含json，则返回null作为body。&nbsp;
+要求非JSON的资源，在content-type不包含json，则返回null作为body。
 
 传递headers：false作为一个选项，从响应排除StatusCode和headers，仅被返回资源的内容（_error属性仍然是可用的）。
 

@@ -193,7 +193,7 @@ tags: [node.js]
 * 新浪微博DB proxy
 * 腾讯朋友网推送
 
- 摘自&nbsp;http://segmentfault.com/a/1190000000348772
+ 摘自http://segmentfault.com/a/1190000000348772
 
 [0]: http://www.nodejs.org/
 [1]: http://nodejs-org.qiniudn.com/
