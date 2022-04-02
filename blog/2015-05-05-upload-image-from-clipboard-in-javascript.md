@@ -1,6 +1,6 @@
 ---
-slug: 5548272929a119801864959d
-title: js键盘粘贴上传图片
+slug: upload-image-from-clipboard-in-javascript
+title: js 键盘粘贴上传图片
 tags: [图片上传 ,粘贴 ,javascript ,jquery]
 ---
 

@@ -1,6 +1,6 @@
 ---
-slug: 55449377cfac6c4971e46a0b
-title: nodemailer使用阿里云邮箱发送邮件(2016.10.28更新)
+slug: send-mail-using-nodemailer-with-aliyun
+title: nodemailer 使用阿里云邮箱发送邮件(2016.10.28更新)
 tags: [node.js ,nodemailer]
 ---
 
@@ -8,15 +8,15 @@ tags: [node.js ,nodemailer]
 
 在网上搜索nodemailer发送邮件的例子，大多是通过Gmail、QQ等的私人邮箱来发送邮件的，smtp服务器也是平台上的。
 
-而可能我们在自己开发过程中的场景是自有的企业邮箱，比如我就是用的阿里云的企业邮箱免费版，而绑定的域名是我自己的 smtp.gaoqixhb.com。
+而可能我们在自己开发过程中的场景是自有的企业邮箱，比如我就是用的阿里云的企业邮箱免费版，而绑定的域名是我自己的 `smtp.gaoqixhb.com`。
 
 那么要怎么设置呢，做了个例子。
 
 
-注意：这里用的nodemailer包的版本不是最新的，是2.5.0(<del>0.3.43</del>已升级)。
+注意：这里用的 `nodemailer` 包的版本不是最新的，是2.5.0(<del>0.3.43</del>已升级)。
 
 
-github地址：https://github.com/luoyjx/nodemailer-demo
+github地址：`https://github.com/luoyjx/nodemailer-demo`
 
 
 先是创建一个transport：
