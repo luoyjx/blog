@@ -7,7 +7,7 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
-    "textlint": "textlint blog/*.md"
+    "textfmt": "heyspace -i blog -b nobackup -q"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-beta.18",
@@ -30,8 +30,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "textlint": "^12.1.1",
-    "textlint-rule-ja-space-between-half-and-full-width": "^2.2.0"
-  }
+  "devDependencies": {}
 }

@@ -1,10 +1,10 @@
 ---
 slug: upload-image-from-clipboard-in-javascript
 title: js 键盘粘贴上传图片
-tags: [图片上传 ,粘贴 ,javascript ,jquery]
+tags: [图片上传 , 粘贴 ,javascript ,jquery]
 ---
 
-segmentfault上看到的一个问直接在文本框中粘贴就可以上传图片的例子。
+segmentfault 上看到的一个问直接在文本框中粘贴就可以上传图片的例子。
 
 ```js
 /** 粘贴上传图片 **/

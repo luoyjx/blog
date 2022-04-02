@@ -1,12 +1,12 @@
 ---
 slug: query-pre-or-next-by-objectid-in-mongodb
-title: 根据mongodb的ObjectId查询上一条下一条(单实例)
+title: 根据 mongodb 的 ObjectId 查询上一条下一条 (单实例)
 tags: [mongodb]
 ---
 
-   譬如做文章类内容页的时候可能需要用到上一篇下一篇，这个在mongodb怎么实现呢？
+   譬如做文章类内容页的时候可能需要用到上一篇下一篇，这个在 mongodb 怎么实现呢？
 
-  但是mongodb的主键并不是有自增数字类型，但是它的策略也是有规律，按id的大小排序是可以的。
+  但是 mongodb 的主键并不是有自增数字类型，但是它的策略也是有规律，按 id 的大小排序是可以的。
 
   给出具体查询的语句：
 
@@ -22,6 +22,4 @@ tags: [mongodb]
 
   有待测试。
 
-  感觉好一点的实现方案是直接将上一条及下一条的id存为字段。
-
-
+  感觉好一点的实现方案是直接将上一条及下一条的 id 存为字段。

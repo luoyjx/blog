@@ -1,14 +1,14 @@
 ---
 slug: async-in-javascript-promise
 title: JavaScript 异步编程的 Promise 模式
-tags: [javascript ,异步 ,promise]
+tags: [javascript , 异步 ,promise]
 ---
 
 作者 [崔康][0]
 
-异步模式在web编程中变得越来越重要，对于web主流语言Javascript来说，这种模式实现起来不是很利索，为此，许多Javascript库（比如 jQuery和Dojo）添加了一种称为promise的抽象（有时也称之为deferred）。通过这些库，开发人员能够在实际编程中使用 promise模式。IE官方博客最近发表了一篇[文章][1]，详细讲述了如何使用[XMLHttpRequest2][2]来实践promise模式。我们来了解一下相关的概念和应用。
+异步模式在 web 编程中变得越来越重要，对于 web 主流语言 Javascript 来说，这种模式实现起来不是很利索，为此，许多 Javascript 库（比如 jQuery 和 Dojo）添加了一种称为 promise 的抽象（有时也称之为 deferred）。通过这些库，开发人员能够在实际编程中使用 promise 模式。IE 官方博客最近发表了一篇 [文章][1]，详细讲述了如何使用 [XMLHttpRequest2][2] 来实践 promise 模式。我们来了解一下相关的概念和应用。
 
-考虑这样一个例子，某网页存在异步操作（通过[XMLHttpRequest2][2]或者[Web][3][Workers][4]）。随着Web 2.0技术的深入，浏览器端承受了越来越多的计算压力，所以“并发”具有积极的意义。对于开发人员来说，既要保持页面与用户的交互不受影响，又要协调页面与异步任务的关系，这种非线性执行的编程要求存在适应的困难。先抛开页面交互不谈，我们能够想到对于异步调用需要处理两种结果——成功操作和失败处理。在成功的调用后，我们可能需要把返回的结果用在另一个Ajax请求中，这就会出现“函数连环套”的情况（在笔者的另一篇文章《[NodeJS的异步编程风格][5]》中有详细的解释）。这种情况会造成编程的复杂性。看看下面的代码示例（基于XMLHttpRequest2）：
+考虑这样一个例子，某网页存在异步操作（通过 [XMLHttpRequest2][2] 或者 [Web][3][Workers][4]）。随着 Web 2.0 技术的深入，浏览器端承受了越来越多的计算压力，所以“并发”具有积极的意义。对于开发人员来说，既要保持页面与用户的交互不受影响，又要协调页面与异步任务的关系，这种非线性执行的编程要求存在适应的困难。先抛开页面交互不谈，我们能够想到对于异步调用需要处理两种结果——成功操作和失败处理。在成功的调用后，我们可能需要把返回的结果用在另一个 Ajax 请求中，这就会出现“函数连环套”的情况（在笔者的另一篇文章《[NodeJS 的异步编程风格][5]》中有详细的解释）。这种情况会造成编程的复杂性。看看下面的代码示例（基于 XMLHttpRequest2）：
 ```js
     function searchTwitter(term, onload, onerror) {
 
@@ -56,26 +56,26 @@ tags: [javascript ,异步 ,promise]
      }
 ```
 
-上面的代码其功能是获取Twitter中hashtag为IE10和IE9的内容并在页面中显示出来。这种嵌套的回调函数难以理解，开发人员需要仔细分析哪些代码用于应用的业务逻辑，而哪些代码处理异步函数调用的，代码结构支离破碎。错误处理也分解了，我们需要在各个地方检测错误的发生并作出相应的处理。
+上面的代码其功能是获取 Twitter 中 hashtag 为 IE10 和 IE9 的内容并在页面中显示出来。这种嵌套的回调函数难以理解，开发人员需要仔细分析哪些代码用于应用的业务逻辑，而哪些代码处理异步函数调用的，代码结构支离破碎。错误处理也分解了，我们需要在各个地方检测错误的发生并作出相应的处理。
 
-为了降低异步编程的复杂性，开发人员一直寻找简便的方法来处理异步操作。其中一种处理模式称为promise，它代表了一种可能会长时间运行而且不一定必须完整的操作的结果。这种模式不会阻塞和等待长时间的操作完成，而是返回一个代表了承诺的（promised）结果的对象。
+为了降低异步编程的复杂性，开发人员一直寻找简便的方法来处理异步操作。其中一种处理模式称为 promise，它代表了一种可能会长时间运行而且不一定必须完整的操作的结果。这种模式不会阻塞和等待长时间的操作完成，而是返回一个代表了承诺的（promised）结果的对象。
 
-考虑这样一个例子，页面代码需要访问第三方的API，网络延迟可能会造成响应时间较长，在这种情况下，采用异步编程不会影响整个页面与用户的交互。promise模式通常会实现一种称为then的方法，用来注册状态变化时对应的回调函数。比如下面的代码示例：
+考虑这样一个例子，页面代码需要访问第三方的 API，网络延迟可能会造成响应时间较长，在这种情况下，采用异步编程不会影响整个页面与用户的交互。promise 模式通常会实现一种称为 then 的方法，用来注册状态变化时对应的回调函数。比如下面的代码示例：
 
 ```js
     searchTwitter(term).then(filterResults).then(displayResults);
 ```
 
-promise模式在任何时刻都处于以下三种状态之一：未完成（unfulfilled）、已完成（resolved）和拒绝（rejected）。以CommonJS Promise/A 标准为例，promise对象上的then方法负责添加针对已完成和拒绝状态下的处理函数。then方法会返回另一个promise对象，以便于形成promise管道，这种返回promise对象的方式能够支持开发人员把异步操作串联起来，如then(resolvedHandler, rejectedHandler); 。resolvedHandler 回调函数在promise对象进入完成状态时会触发，并传递结果；rejectedHandler函数会在拒绝状态下调用。
+promise 模式在任何时刻都处于以下三种状态之一：未完成（unfulfilled）、已完成（resolved）和拒绝（rejected）。以 CommonJS Promise/A 标准为例，promise 对象上的 then 方法负责添加针对已完成和拒绝状态下的处理函数。then 方法会返回另一个 promise 对象，以便于形成 promise 管道，这种返回 promise 对象的方式能够支持开发人员把异步操作串联起来，如 then(resolvedHandler, rejectedHandler); 。resolvedHandler 回调函数在 promise 对象进入完成状态时会触发，并传递结果；rejectedHandler 函数会在拒绝状态下调用。
 
-有了promise模式，我们可以重新实现上面的Twitter示例。为了更好的理解实现方法，我们尝试着从零开始构建一个promise模式的框架。首先需要一些对象来存储promise。
+有了 promise 模式，我们可以重新实现上面的 Twitter 示例。为了更好的理解实现方法，我们尝试着从零开始构建一个 promise 模式的框架。首先需要一些对象来存储 promise。
 ```js
     var Promise = function () {
             /* initialize promise */
         };
 ```
 
- 接下来，定义then方法，接受两个参数用于处理完成和拒绝状态。
+ 接下来，定义 then 方法，接受两个参数用于处理完成和拒绝状态。
  ```js
  Promise.prototype.then = function (onResolved, onRejected) {
          /* invoke handlers based upon state transition */
@@ -216,7 +216,7 @@ Dojo框架里实现promise模式的对象是Deferred，该对象也有then函数
     });
 ```
 
- 除此之外，Dojo还引入了dojo.DeferredList,支持开发人员同时处理多个dojo.Deferred对象，这其实就是上面所提到的when方法的另一种表现形式。
+ 除此之外，Dojo 还引入了 dojo.DeferredList, 支持开发人员同时处理多个 dojo.Deferred 对象，这其实就是上面所提到的 when 方法的另一种表现形式。
 
 ```js
     dojo.require("dojo.DeferredList");
@@ -249,13 +249,13 @@ Dojo框架里实现promise模式的对象是Deferred，该对象也有then函数
 
 上面的代码比较清楚，不再详述。
 
-说到这里，读者可能已经对promise模式有了一个比较完整的了解，异步编程会变得越来越重要，在这种情况下，我们需要找到办法来降低复杂度，promise模式就是一个很好的例子，它的风格比较人性化，而且主流的JS框架提供了自己的实现。所以在编程实践中，开发人员应该尝试这种便捷的编程技巧。需要注意的是，promise模式的使用需要恰当地设置promise对象，在对应的事件中调用状态转换函数，并且在最后返回promise对象。
+说到这里，读者可能已经对 promise 模式有了一个比较完整的了解，异步编程会变得越来越重要，在这种情况下，我们需要找到办法来降低复杂度，promise 模式就是一个很好的例子，它的风格比较人性化，而且主流的 JS 框架提供了自己的实现。所以在编程实践中，开发人员应该尝试这种便捷的编程技巧。需要注意的是，promise 模式的使用需要恰当地设置 promise 对象，在对应的事件中调用状态转换函数，并且在最后返回 promise 对象。
 
-技术社区对异步编程的关注也在升温，国内社区也发出了自己的声音。资深技术专家老赵就发布了一套开源的异步开发辅助库Jscex，它的设计很巧妙，抛弃了回调函数的编程方式，采用一种“线性编码、异步执行”的思想，感兴趣的读者可以查看[这里][7]。
+技术社区对异步编程的关注也在升温，国内社区也发出了自己的声音。资深技术专家老赵就发布了一套开源的异步开发辅助库 Jscex，它的设计很巧妙，抛弃了回调函数的编程方式，采用一种“线性编码、异步执行”的思想，感兴趣的读者可以查看 [这里][7]。
 
-不仅仅是前端的JS库，如今火热的NodeJS平台也出现了许多第三方的promise模块，具体的清单可以访问[这里][8]。
+不仅仅是前端的 JS 库，如今火热的 NodeJS 平台也出现了许多第三方的 promise 模块，具体的清单可以访问 [这里][8]。
 
-注：本文中的所有代码示例均来自于IE官方博客。
+注：本文中的所有代码示例均来自于 IE 官方博客。
 
 原文来自 InfoQ :http://www.infoq.com/cn/news/2011/09/js-promise/
 

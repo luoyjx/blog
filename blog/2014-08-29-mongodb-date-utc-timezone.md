@@ -28,6 +28,4 @@ beijing = utc + (3600000*offset);
 data.DataTime = new Date(beijing);
 ```
 
-将时区再加8个之后入库就正常了
-
-
+将时区再加 8 个之后入库就正常了

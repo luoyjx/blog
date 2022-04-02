@@ -1,20 +1,20 @@
 ---
 slug: upload-image-using-qiniu-node-sdk
 title: 折腾七牛 Node-sdk 的图片上传
-tags: [node.js ,七牛]
+tags: [node.js , 七牛]
 ---
 
- 之前是在sdk下面的评论看到[fengmk2][0]大神的qn三方sdk，结果用着用着，我本地的可以上传，但是放到阿里云上就传不了了。
+ 之前是在 sdk 下面的评论看到 [fengmk2][0] 大神的 qn 三方 sdk，结果用着用着，我本地的可以上传，但是放到阿里云上就传不了了。
 
-今天回来直接用了官方的sdk，可以了。
+今天回来直接用了官方的 sdk，可以了。
 
 分享下过程：
 
 官方文档 ：`http://developer.qiniu.com/docs/v6/sdk/nodejs-sdk.html#sdk-usage`
 
-这里是官方的nodejs sdk的上传文档了。
+这里是官方的 nodejs sdk 的上传文档了。
 
- 因为我的富文本编辑器是用的kindediter，有个上传的UI，于是我就懒得去改界面了。
+ 因为我的富文本编辑器是用的 kindediter，有个上传的 UI，于是我就懒得去改界面了。
 
  所以我采取的策略是：
 
@@ -84,10 +84,10 @@ tags: [node.js ,七牛]
 
  福利：
 
-1. 免费存储空间10GB
-1. 免费每月下载流量10GB
-1. 免费每月PUT/DELETE 10万次请求
-1. 免费每月GET 100万次请求
+1. 免费存储空间 10GB
+1. 免费每月下载流量 10GB
+1. 免费每月 PUT/DELETE 10 万次请求
+1. 免费每月 GET 100 万次请求
 
  对于刚开始的小站来说应该是够用了。
 

@@ -1,96 +1,96 @@
 ---
 slug: nodejs-chinese-resources
-title: node.js中文资料导航
+title: node.js 中文资料导航
 tags: [node.js]
 ---
 
 ## Node.js
 
 * [HomePage][0]
-* [Node官网七牛镜像][1]
-* [Infoq深入浅出Node.js系列（进阶必读）][2]
-* [Node.js中文文档][3]
+* [Node 官网七牛镜像][1]
+* [Infoq 深入浅出 Node.js 系列（进阶必读）][2]
+* [Node.js 中文文档][3]
 * [被误解的 Node.js][4]
-* [Node.js C++ addon编写实战系列][5]
-* [热门node.js模块排行榜，方便找出你想要的模块][6]
-* [nodejs多线程，真正的非阻塞][7]
-* [浅析nodejs的buffer类][8]
-* [利用libuv编写异步多线程的addon实例][9]
-* [Node.js中exports与module.exports的区别][10]
+* [Node.js C++ addon 编写实战系列][5]
+* [热门 node.js 模块排行榜，方便找出你想要的模块][6]
+* [nodejs 多线程，真正的非阻塞][7]
+* [浅析 nodejs 的 buffer 类][8]
+* [利用 libuv 编写异步多线程的 addon 实例][9]
+* [Node.js 中 exports 与 module.exports 的区别][10]
 * [Node.js http 管道拒绝服务漏洞][11]
-* [Node.js高级编程][12]
+* [Node.js 高级编程][12]
 
 ## 业界新闻
 
-* [看eBay如何评价他们的Node.js首次尝鲜][13]
-* [程序员如何说服老板采用Node.js？][14]
-* [百万级并发 Node.js也能行][15]
-* [高性能Node.js：来自LinkedIn Mobile的10条优化建议][16]
-* [Kraken：改变PayPal开发文化的Node.js框架][17]
-* [Groupon抛弃Rails，转向Node.js][18]
+* [看 eBay 如何评价他们的 Node.js 首次尝鲜][13]
+* [程序员如何说服老板采用 Node.js？][14]
+* [百万级并发 Node.js 也能行][15]
+* [高性能 Node.js：来自 LinkedIn Mobile 的 10 条优化建议][16]
+* [Kraken：改变 PayPal 开发文化的 Node.js 框架][17]
+* [Groupon 抛弃 Rails，转向 Node.js][18]
 
 ## 经验分享
 
-* [SDCC讲师专访：淘宝朴灵谈Node.js][19]
-* [Node.js的核心与红利][20]
-* [QCon北京2013 Node.js专题出品人朴灵专访][21]
-* [一个周末掌握IT前沿技术之node.js篇][22]
-* [用node+express搭建多人博客教程系列][23]
-* [Node.js静态文件服务器实战][24]
+* [SDCC 讲师专访：淘宝朴灵谈 Node.js][19]
+* [Node.js 的核心与红利][20]
+* [QCon 北京 2013 Node.js 专题出品人朴灵专访][21]
+* [一个周末掌握 IT 前沿技术之 node.js 篇][22]
+* [用 node+express 搭建多人博客教程系列][23]
+* [Node.js 静态文件服务器实战][24]
 * [人人和微博登录模块的实现][25]
-* [《京JS》会议 &amp; V8上的JS优化][26]
+* [《京 JS》会议 &amp; V8 上的 JS 优化][26]
 * [沪 JS 国内讲师的 PPT 收集][27]
-* [给Node.js新手的7条小建议][28]
+* [给 Node.js 新手的 7 条小建议][28]
 
 ## 模块导航
 
-### web服务器框架
+### web 服务器框架
 
-#### 最流行的web框架Express
+#### 最流行的 web 框架 Express
 
 * [HomePage][29]
-* [加装涡轮，提速expressjs][30]
-* [给 connect 的 static 模块加上url路径前缀][31]
-* [研究nodeclub 登陆验证逻辑的一些心得][32]
+* [加装涡轮，提速 expressjs][30]
+* [给 connect 的 static 模块加上 url 路径前缀][31]
+* [研究 nodeclub 登陆验证逻辑的一些心得][32]
 * [Express.js 中文入门指引手册][33]
-* [Connect架构初探 for 新手][34]
+* [Connect 架构初探 for 新手][34]
 * [使用 Express + Socket.IO 搭建多人聊天室][35]
 
-#### 国人开源web框架rrestjs
+#### 国人开源 web 框架 rrestjs
 
 * [HomePage][36]
 
-#### 实时应用web框架meteor
+#### 实时应用 web 框架 meteor
 
 * [HomePage][37]
-* [Meteor-DDP翻译][38]
-* [Meteor 非官方中文文档（不包含API部分）][39]
-* [基于meteor开发的开源项目列表][40]
+* [Meteor-DDP 翻译][38]
+* [Meteor 非官方中文文档（不包含 API 部分）][39]
+* [基于 meteor 开发的开源项目列表][40]
 
-#### 基于Express的实时MVC框架Sails
+#### 基于 Express 的实时 MVC 框架 Sails
 
 * [HomePage][41]
 
 ### Mysql 老牌关系型数据库
 
 * [HomePage][42]
-* [mysql处理BIGINT里面的一个坑][43]
-* [使用node-mysql中的连接池][44]
-* [mysql自动断开解决办法][45]
+* [mysql 处理 BIGINT 里面的一个坑][43]
+* [使用 node-mysql 中的连接池][44]
+* [mysql 自动断开解决办法][45]
 
 ### Mongodb
 
 * [node-mongodb-native][46]
 * [mongoose][47]
-* [如何使用mongoose对一个100万+的mongodb的表进行遍历操作][48]
-* [[技术讨论]mongodb驱动的正确使用方法][49]
+* [如何使用 mongoose 对一个 100 万+的 mongodb 的表进行遍历操作][48]
+* [[技术讨论]mongodb 驱动的正确使用方法][49]
 
 ### 异步流程处理
 
 #### async
 
 * [HomePage][50]
-* [Async中文详解][51]
+* [Async 中文详解][51]
 
 #### eventproxy
 
@@ -99,7 +99,7 @@ tags: [node.js]
 #### Q Promise 异步模式
 
 * [HomePage][53]
-* [在Node.js 中用 Q 实现Promise – Callbacks之外的另一种选择][54]
+* [在 Node.js 中用 Q 实现 Promise – Callbacks 之外的另一种选择][54]
 
 ### Redis 内存键值数据库
 
@@ -108,74 +108,74 @@ tags: [node.js]
 ### Pomelo 网易出品的网页游戏框架
 
 * [pomelo][56]
-* [Infoq深入浅出node.js游戏服务器开发][57]
-* [官网wiki][58]
+* [Infoq 深入浅出 node.js 游戏服务器开发][57]
+* [官网 wiki][58]
 * [响应非常迅速的官方论坛][59]
 
 ### 字符格式
 
-* [開源的簡繁轉換庫OpenCC支持Node.js了][60]
-* [iconv-lite扩展：增加big5/shift-jis支持][61]
+* [開源的簡繁轉換庫 OpenCC 支持 Node.js 了][60]
+* [iconv-lite 扩展：增加 big5/shift-jis 支持][61]
 
 ### 网页模板引擎
 
-* [WEB模板jade、ejs、handlebars 万行代码解释效率比较，jade完败][62]
-* [Javascript模板引擎性能对比及几点优化][63]
+* [WEB 模板 jade、ejs、handlebars 万行代码解释效率比较，jade 完败][62]
+* [Javascript 模板引擎性能对比及几点优化][63]
 * [让 ejs 更加快 | Let ejs faster with options._with = false][64]
-* [EJS快速入门教程][65]
+* [EJS 快速入门教程][65]
 
 ### 图片处理
 
-* [Nodejs跨平台轻量级图片编解码库【增加Jpeg质量调整】][66]
-* [node-ccap模块生成captcha验证码][67]
-* [使用nodejs将html5 canvas base64编码图片保存为文件][68]
+* [Nodejs 跨平台轻量级图片编解码库【增加 Jpeg 质量调整】][66]
+* [node-ccap 模块生成 captcha 验证码][67]
+* [使用 nodejs 将 html5 canvas base64 编码图片保存为文件][68]
 
 ### 运维
 
-* [Node.js 异步异常的处理与domain模块解析][69]
-* [关于XSS（跨站脚本攻击）和CSRF（跨站请求伪造）][70]
+* [Node.js 异步异常的处理与 domain 模块解析][69]
+* [关于 XSS（跨站脚本攻击）和 CSRF（跨站请求伪造）][70]
 * [forever 替代工具 pm2 的介绍][71]
-* [upstart封装mongodb应用为系统服务][72]
-* [告别node-forever,拥抱PM2][73]
-* [阿里云主机Nginx下配置NodeJS、Express和Forever][74]
+* [upstart 封装 mongodb 应用为系统服务][72]
+* [告别 node-forever, 拥抱 PM2][73]
+* [阿里云主机 Nginx 下配置 NodeJS、Express 和 Forever][74]
 
 ## 性能测试
 
-* [阿里出品的node.js调研与服务性能测试][75]
-* [多核单服务器各种配置和业务压力下的node.js性能测试][76]
-* [巅峰对决：node.js和php性能测试][77]
+* [阿里出品的 node.js 调研与服务性能测试][75]
+* [多核单服务器各种配置和业务压力下的 node.js 性能测试][76]
+* [巅峰对决：node.js 和 php 性能测试][77]
 
 ## 活跃开发者（排名不分先后）
 
 * [朴灵][78]
-* [dead_horse/死马][79]
+* [dead_horse/ 死马][79]
 * [snoopyxdy][80]
-* [Python发烧友][81]
+* [Python 发烧友][81]
 * [老雷][82]
 * [shiedman][83]
 * [jiyinyiyong][84]
 
-## 开源案例 收集Cnode的开源项目
+## 开源案例 收集 Cnode 的开源项目
 
 ### 社交类
 
-* [Cnodejs 最活跃的Node.js社区][85]
+* [Cnodejs 最活跃的 Node.js 社区][85]
 * [晓知 个人博客][86]
-* [使用Nodejs编写多人订餐系统][87]
-* [NodeJS写的WebQQ][88]
+* [使用 Nodejs 编写多人订餐系统][87]
+* [NodeJS 写的 WebQQ][88]
 * [Yblog 博客程序][89]
-* [noderce博客程序][90]
+* [noderce 博客程序][90]
 
 ### 工具类
 
-* [wechat微信中间件][91]
-* [深度遍历目录/列出目录下所有文件][92]
-* [lincell发布0.1.1版本，一行命令创建IDE][93]
-* [HTML标签XSS过滤模块][94]
-* [基于Node.js的中文分词模块][95]
-* [纯真IP库lib-qqwry][96]
-* [豆瓣SDK][97]
-* [数字与字符串转换模块baseN，支持2~62间任意进制转换][98]
+* [wechat 微信中间件][91]
+* [深度遍历目录 / 列出目录下所有文件][92]
+* [lincell 发布 0.1.1 版本，一行命令创建 IDE][93]
+* [HTML 标签 XSS 过滤模块][94]
+* [基于 Node.js 的中文分词模块][95]
+* [纯真 IP 库 lib-qqwry][96]
+* [豆瓣 SDK][97]
+* [数字与字符串转换模块 baseN，支持 2~62 间任意进制转换][98]
 
 ## 商业应用
 
@@ -186,14 +186,14 @@ tags: [node.js]
 * [花瓣网][102]
 * [雪球网][103]
 * 小米手机抢购
-* 网易pomelo消息推送系统
+* 网易 pomelo 消息推送系统
 * PayPal
 * Groupon
 * 百度推送平台
-* 新浪微博DB proxy
+* 新浪微博 DB proxy
 * 腾讯朋友网推送
 
- 摘自http://segmentfault.com/a/1190000000348772
+ 摘自 http://segmentfault.com/a/1190000000348772
 
 [0]: http://www.nodejs.org/
 [1]: http://nodejs-org.qiniudn.com/

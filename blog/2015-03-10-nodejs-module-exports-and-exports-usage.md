@@ -4,11 +4,11 @@ title: nodejs 扫盲 module.exports 与 exports
 tags: [node.js]
 ---
 
-在nodejs模块中，如果希望向外暴露出模块中的方法和变量，需要使用module.exports或者exports，但是他们的意义却不同。
+在 nodejs 模块中，如果希望向外暴露出模块中的方法和变量，需要使用 module.exports 或者 exports，但是他们的意义却不同。
 
 ## module.exports
 
-module表示该模块对象，在module对象中有个exports的属性，**默认值为空对象{}**；exports是模块往外暴露方法或者变量的接口，可以暴露变量或者方法：
+module 表示该模块对象，在 module 对象中有个 exports 的属性，**默认值为空对象{}**；exports 是模块往外暴露方法或者变量的接口，可以暴露变量或者方法：
 
 ```js
     var a =  10;
@@ -45,8 +45,7 @@ module表示该模块对象，在module对象中有个exports的属性，**默�
 
 ## exports
 
-
-exports是module.exports的一个**引用**，可以为exports添加属性，但**不能直接赋值**，那样就会**失去对module.exports的引用**，便不会暴露出所的值。
+exports 是 module.exports 的一个**引用**，可以为 exports 添加属性，但**不能直接赋值**，那样就会**失去对 module.exports 的引用**，便不会暴露出所的值。
 
 ```js
     exports.name = 'hello';
@@ -56,18 +55,18 @@ exports是module.exports的一个**引用**，可以为exports添加属性，但
     }
 ```
 
-因为是module.exports的引用，所以每次为exports赋值的时候，就是为module.exports赋值。
-如果直接为exports赋值：
+因为是 module.exports 的引用，所以每次为 exports 赋值的时候，就是为 module.exports 赋值。
+如果直接为 exports 赋值：
 
 ```js
     exports = 'hello';
 ```
 
-即改变了exports对module.exports的引用，所以所赋的值无法通过module.exports暴露出去。
+即改变了 exports 对 module.exports 的引用，所以所赋的值无法通过 module.exports 暴露出去。
 
 ## exports = module.exports = xxx
 
-可以在很多项目中看到这句，当模块要输出一个非Object时（比如一个Function），可以使用
+可以在很多项目中看到这句，当模块要输出一个非 Object 时（比如一个 Function），可以使用
 
 ```js
     module.exports = function () {}

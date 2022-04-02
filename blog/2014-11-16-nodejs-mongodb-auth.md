@@ -4,13 +4,13 @@ title: nodejs 连接 mongodb 使用认证配置
 tags: [node.js ,mongodb]
 ---
 
-nodejs中使用默认方式连接mongodb时，很多例子包括github上给出的demo示例，都只是简单的给出了在mongodb非认证情况下的连接配置。
+nodejs 中使用默认方式连接 mongodb 时，很多例子包括 github 上给出的 demo 示例，都只是简单的给出了在 mongodb 非认证情况下的连接配置。
 
-但是我在给mongodb加入了auth参数启动之后要怎么来在nodejs中配置才行呢？
+但是我在给 mongodb 加入了 auth 参数启动之后要怎么来在 nodejs 中配置才行呢？
 
-这个问题真是折腾了几个钟头，因为我是用的是generic-pool的，好似有点绕了一个弯。
+这个问题真是折腾了几个钟头，因为我是用的是 generic-pool 的，好似有点绕了一个弯。
 
-我再查资料无果的情况下，把mongodb的源代码打开来看了看，发现确实是有认证的方法的。
+我再查资料无果的情况下，把 mongodb 的源代码打开来看了看，发现确实是有认证的方法的。
 ```js
     /**
      * Authenticate a user against the server.
@@ -90,9 +90,9 @@ nodejs中使用默认方式连接mongodb时，很多例子包括github上给出�
     };
 ```
 
-这是认证部分的源码，于是我在new了一个Db对象之后接着就调用了认证方法，结果在使用查询还是提示没有认证，这就奇怪了，又找了半天，在CNODE上有个帖子的一个评论里看到了答案，应该是在open之后返回db实例之后再去调用authenticate方法来进行认证，看来是我加错了位置。
+这是认证部分的源码，于是我在 new 了一个 Db 对象之后接着就调用了认证方法，结果在使用查询还是提示没有认证，这就奇怪了，又找了半天，在 CNODE 上有个帖子的一个评论里看到了答案，应该是在 open 之后返回 db 实例之后再去调用 authenticate 方法来进行认证，看来是我加错了位置。
 
-由于我使用的是generic-pool，所以这个就是需要在create方法里加上，附上代码：
+由于我使用的是 generic-pool，所以这个就是需要在 create 方法里加上，附上代码：
 ```js
     global.pool = poolModule.Pool({
         name     : 'mongoPool',
@@ -114,10 +114,8 @@ nodejs中使用默认方式连接mongodb时，很多例子包括github上给出�
     });
 ```
 
-记住，千万是在open之后返回的db实例再进行认证，别问我是谁，我叫雷锋。
+记住，千万是在 open 之后返回的 db 实例再进行认证，别问我是谁，我叫雷锋。
 
 参考地址：
 
 https://cnodejs.org/topic/519e01c563e9f8a542fa68f9#51c2bd8773c638f3703eac1a
-
-
