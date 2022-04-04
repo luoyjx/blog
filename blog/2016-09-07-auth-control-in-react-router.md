@@ -1,5 +1,5 @@
 ---
-slug: 57cfb2bce6be018707d82c41
+slug: auth-control-in-react-router
 title: react 路由权限控制
 tags: [react ,react-router ,权限控制]
 ---
@@ -13,7 +13,7 @@ tags: [react ,react-router ,权限控制]
 在React中，为某个路由进行权限监听的方式是onEnter `<Route path="page" component={Page} onEnter={requireCredentials}/>` ，该onEnter属性对应连着一个具有判**断权限的中间服务。**我们通过上一级路由来启动这个服务。假设我们需要从'/form'到'/page'之间做一个判断，在'/form'中填写特定字段后才能成功跳转，否则redirect到'/error'
 
 
-```
+```js
 //form
 const Form = createClass({
   // 省略部分代码

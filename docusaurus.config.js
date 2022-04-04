@@ -10,9 +10,9 @@ module.exports = {
   themeConfig: {
     algolia: {
       // The application ID provided by Algolia
-      appId: process.env.ALGOLIA_APP_ID,
+      appId: 'NEJ4XSDQMO',
       // Public API key: it is safe to commit it
-      apiKey: process.env.ALGOLIA_API_KEY,
+      apiKey: '2bbb96faa705971e049a5c8e92e425ab',
       indexName: 'blog',
       // Optional: see doc section below
       contextualSearch: true,

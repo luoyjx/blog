@@ -1,6 +1,6 @@
 ---
-slug: 57aad6f21c096a7c0a1ac1d4
-title: node.js实现文件下载
+slug: download-file-with-nodejs
+title: node.js 实现文件下载
 tags: [node.js ,文件下载]
 ---
 
@@ -10,7 +10,7 @@ tags: [node.js ,文件下载]
 
 代码如下
 
-```
+```js
 var fs = require('fs');
 var pdf = fs.createReadStream(path);
 

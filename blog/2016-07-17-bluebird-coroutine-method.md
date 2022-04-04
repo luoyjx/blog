@@ -1,6 +1,6 @@
 ---
-slug: 578acf095b22885f31d10a9d
-title: bluebird的coroutine方法(类似co)
+slug: bluebird-coroutine-method
+title: bluebird 的 coroutine 方法 (类似 co )
 tags: [node.js]
 ---
 
@@ -10,13 +10,13 @@ tags: [node.js]
 
 # 使用
 
-```
+```js
 Promise.coroutine(GeneratorFunction(...arguments) generatorFunction) -> function
 ```
 
 # 示例
 
-```
+```js
 var Promise = require("bluebird");
 
 function PingPong() {

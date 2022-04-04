@@ -1,5 +1,5 @@
 ---
-slug: 6082753b9f5c1f1f44ab0ef1
+slug: overwrite-file-on-linux-without-vim
 title: linux 技巧如何在没有 vim 的情况下覆盖 debain 源配置文件
 tags: [linux ,debain]
 ---

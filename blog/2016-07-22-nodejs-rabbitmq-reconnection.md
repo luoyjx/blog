@@ -1,5 +1,5 @@
 ---
-slug: 579183085b22885f31d10aa0
+slug: nodejs-rabbitmq-reconnection
 title: node.js rabbitmq(amqplib) 断线重连
 tags: [node.js ,rabbitmq ,amqp ,amqplib]
 ---
@@ -19,7 +19,7 @@ tags: [node.js ,rabbitmq ,amqp ,amqplib]
 
 # 封装实现
 
-```
+```js
 /**
  * Mq Factory
  * @authors yanjixiong
@@ -75,10 +75,10 @@ MQ.prototype.init = function init() {
 		.then(function (ch) {
 
 			// 进程被杀死关闭连接
-			process.once('SIGINT', function() { 
+			process.once('SIGINT', function() {
 				log.info('kill by signal SIGINT');
 				ch.close();
-				self.connection.close(); 
+				self.connection.close();
 				self.connection = null;
 				process.exit(0);
 			});
@@ -135,7 +135,7 @@ MQ.prototype.reconnect = function() {
 	setTimeout(function () {
 		self.init();
 		self.reconnectCount++;
-	}, 3000);	
+	}, 3000);
 }
 
 /**
@@ -155,9 +155,9 @@ MQ.prototype.getConnection = function getConnection() {
 				self.connection = conn;
 
 				// 进程被杀死关闭连接
-				process.once('SIGINT', function() { 
+				process.once('SIGINT', function() {
 					log.info('kill by signal SIGINT');
-					conn.close(); 
+					conn.close();
 					self.connection = null;
 					process.exit(0);
 				});
