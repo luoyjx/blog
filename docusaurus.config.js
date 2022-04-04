@@ -1,24 +1,23 @@
 module.exports = {
-  title: '演技熊随想',
-  tagline: 'The tagline of my site',
+  title: '演技熊的随想',
+  tagline: '',
   url: 'https://blognewx.gaoqixhb.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: '', // Usually your GitHub org/user name.
   projectName: 'blog', // Usually your repo name.
   onBrokenLinks: 'ignore',
+  i18n: {
+    defaultLocale: 'zh-CN',
+    locales: ['zh-CN']
+  },
   themeConfig: {
-    algolia: {
-      // The application ID provided by Algolia
-      appId: 'NEJ4XSDQMO',
-      // Public API key: it is safe to commit it
-      apiKey: '2bbb96faa705971e049a5c8e92e425ab',
-      indexName: 'netlify_43ce8aec-b310-4624-9101-3b46a28ac6b2_dev_all',
-      // Optional: see doc section below
-      // contextualSearch: true,
-      // Optional: path for search page that enabled by default (`false` to disable it)
-      // searchPagePath: 'search',
-    },
+    hideableSidebar: true,
+    // algolia: {
+    //   appId: 'NEJ4XSDQMO',
+    //   apiKey: '2bbb96faa705971e049a5c8e92e425ab',
+    //   indexName: 'netlify_43ce8aec-b310-4624-9101-3b46a28ac6b2_dev_all',
+    // },
     prism: {
       additionalLanguages: ['java', 'php'],
       theme: require('prism-react-renderer/themes/github'),
@@ -31,7 +30,13 @@ module.exports = {
       //   src: 'img/gaoqi_blog_logo.png',
       // },
       items: [
-        // {to: 'blog', label: 'Blog', position: 'left'},
+        {
+          type: "doc",
+          docId: "hello",
+          position: "left",
+          label: "Learning",
+        },
+        {to: 'blog', label: 'Blog', position: 'left'},
         {
           label: '标签',
           to: 'tags',
@@ -89,20 +94,38 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
-        docs: false,
+        docs: {
+          sidebarPath: require.resolve("./sidebars.js"),
+        },
         blog: {
           blogSidebarTitle: '全部博文',
-          blogSidebarCount: 0,
+          blogSidebarCount: 5,
           postsPerPage: 20,
           showReadingTime: true,
           readingTime: ({content, frontMatter, defaultReadingTime}) =>
             defaultReadingTime({content, options: {wordsPerMinute: 300}}),
           path: './blog',
-          routeBasePath: '/'
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+      },
+    ],
+  ],
+  plugins: [
+    // ... Your other plugins.
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        language: ["en", "zh"],
+        // ```
+        // When applying `zh` in language, please install `nodejieba` in your project.
+        highlightSearchTermsOnTargetPage: true
       },
     ],
   ],
