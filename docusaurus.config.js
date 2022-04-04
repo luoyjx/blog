@@ -1,7 +1,7 @@
 module.exports = {
   title: '演技熊随想',
   tagline: 'The tagline of my site',
-  url: 'https://blognew.gaoqixhb.com',
+  url: 'https://blognewx.gaoqixhb.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: '', // Usually your GitHub org/user name.
@@ -13,7 +13,7 @@ module.exports = {
       appId: 'NEJ4XSDQMO',
       // Public API key: it is safe to commit it
       apiKey: '2bbb96faa705971e049a5c8e92e425ab',
-      indexName: 'blog',
+      indexName: 'netlify_43ce8aec-b310-4624-9101-3b46a28ac6b2_dev_all',
       // Optional: see doc section below
       contextualSearch: true,
       // Optional: path for search page that enabled by default (`false` to disable it)
