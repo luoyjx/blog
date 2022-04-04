@@ -39,12 +39,12 @@ module.exports = {
         {to: 'blog', label: 'Blog', position: 'left'},
         {
           label: '标签',
-          to: 'tags',
+          to: 'blog/tags',
           position: 'right',
         },
         {
           label: '归档',
-          to: 'archive',
+          to: 'blog/archive',
           position: 'right',
         },
         {
