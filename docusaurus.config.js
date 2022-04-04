@@ -15,9 +15,9 @@ module.exports = {
       apiKey: '2bbb96faa705971e049a5c8e92e425ab',
       indexName: 'netlify_43ce8aec-b310-4624-9101-3b46a28ac6b2_dev_all',
       // Optional: see doc section below
-      contextualSearch: true,
+      // contextualSearch: true,
       // Optional: path for search page that enabled by default (`false` to disable it)
-      searchPagePath: 'search',
+      // searchPagePath: 'search',
     },
     prism: {
       additionalLanguages: ['java', 'php'],
