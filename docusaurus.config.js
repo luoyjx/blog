@@ -10,9 +10,9 @@ module.exports = {
   themeConfig: {
     algolia: {
       // The application ID provided by Algolia
-      appId: '3JTUCD3ZC4',
+      appId: 'NEJ4XSDQMO',
       // Public API key: it is safe to commit it
-      apiKey: '4a8b7e9bad3c2e1083d28998fb2784a54e6ee812da5658783cdb056e24f509e1',
+      apiKey: '2bbb96faa705971e049a5c8e92e425ab',
       indexName: 'netlify_43ce8aec-b310-4624-9101-3b46a28ac6b2_dev_all',
       // Optional: see doc section below
       contextualSearch: true,
