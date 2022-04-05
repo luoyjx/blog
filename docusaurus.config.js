@@ -1,7 +1,7 @@
 module.exports = {
   title: '演技熊的随想',
-  tagline: '',
-  url: 'https://blognewx.gaoqixhb.com',
+  tagline: 'Hi there 👋',
+  url: 'https://blognew.gaoqixhb.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: '', // Usually your GitHub org/user name.
