@@ -132,5 +132,12 @@ module.exports = {
         highlightSearchTermsOnTargetPage: true
       },
     ],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-N5L0R05NMC',
+        anonymizeIP: true,
+      },
+    ],
   ],
 };
