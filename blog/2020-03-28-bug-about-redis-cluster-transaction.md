@@ -33,7 +33,7 @@ async incr (id) {
 ```js
 Cannot read property '1' of undefined
 ```
-
+<!--truncate-->
 # 问题分析、追踪
 
 而错误栈的代码指向的是 `res[1][1]` 中的第二个 `[1]`
