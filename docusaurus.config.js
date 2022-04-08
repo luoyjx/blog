@@ -83,7 +83,7 @@ module.exports = {
               href: 'https://vercel.com',
             },
             {
-              lable: 'Algolia DocSearch',
+              label: 'Algolia DocSearch',
               href: 'https://docsearch.algolia.com'
             },
             {
