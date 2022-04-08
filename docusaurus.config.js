@@ -24,6 +24,7 @@ module.exports = {
       darkTheme: require('prism-react-renderer/themes/dracula'),
     },
     navbar: {
+      hideOnScroll: true,
       title: '演技熊随想',
       // logo: {
       //   alt: 'My Site Logo',
