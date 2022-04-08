@@ -83,8 +83,8 @@ module.exports = {
               href: 'https://vercel.com',
             },
             {
-              lable: 'DocSearch by Algolia',
-              href: 'https://www.algolia.com'
+              lable: 'Algolia DocSearch',
+              href: 'https://docsearch.algolia.com'
             },
             {
               "label": "People illustrations by Storyset",
