@@ -13,11 +13,11 @@ module.exports = {
   },
   themeConfig: {
     hideableSidebar: true,
-    // algolia: {
-    //   appId: 'NEJ4XSDQMO',
-    //   apiKey: '2bbb96faa705971e049a5c8e92e425ab',
-    //   indexName: 'netlify_43ce8aec-b310-4624-9101-3b46a28ac6b2_dev_all',
-    // },
+    algolia: {
+      appId: '9IONV53BRI',
+      apiKey: 'db22115ab7932c062bdba64ca76ea717',
+      indexName: 'gaoqixhb',
+    },
     prism: {
       additionalLanguages: ['java', 'php'],
       theme: require('prism-react-renderer/themes/github'),
@@ -118,20 +118,20 @@ module.exports = {
   ],
   plugins: [
     // ... Your other plugins.
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      {
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        language: ["en", "zh"],
-        // ```
-        // When applying `zh` in language, please install `nodejieba` in your project.
-        highlightSearchTermsOnTargetPage: true
-      },
-    ],
+    // [
+    //   require.resolve("@easyops-cn/docusaurus-search-local"),
+    //   {
+    //     // ... Your options.
+    //     // `hashed` is recommended as long-term-cache of index file is possible.
+    //     hashed: true,
+    //     // For Docs using Chinese, The `language` is recommended to set to:
+    //     // ```
+    //     language: ["en", "zh"],
+    //     // ```
+    //     // When applying `zh` in language, please install `nodejieba` in your project.
+    //     highlightSearchTermsOnTargetPage: true
+    //   },
+    // ],
     [
       '@docusaurus/plugin-google-gtag',
       {
