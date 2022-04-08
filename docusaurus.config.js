@@ -87,7 +87,7 @@ module.exports = {
               href: 'https://docsearch.algolia.com'
             },
             {
-              "label": "People illustrations by Storyset",
+              label: "People illustrations by Storyset",
               href: "https://storyset.com/people"
             }
           ],
