@@ -18,7 +18,7 @@ title: svg 转成 dataURI 在 CSS 中使用
 }
 ```
 
-### encodeSvg
+### 将 svg 转义
 
 ```js
 // this function is from the work of Taylor Hunt found at https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
@@ -53,4 +53,18 @@ function encodeSvg(svgString) {
       //  .replace('@', '%40')
       //  .replace('=', '%3D')
   ;}
+```
+
+### 转义后拼接
+
+```js
+const svgStr = '<svg> ... </svg>'
+const encodedSvgStr = encodeSvg(svgStr)
+const svgDataURI = `data:image/svg+xml;charset:utf-8,${encodedSvgStr}`
+```
+
+```css
+.logo {
+  background: url("data:image/svg+xml;charset:utf-8,%3Csvg ... /svg%3E");
+}
 ```
