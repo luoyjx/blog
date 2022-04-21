@@ -7,5 +7,5 @@ sidebar_position: 1
 # 使用 MySQL cli 工具时，如果你的 db 中包含 utf8mb4 才支持的字符
 
 ```shell
-mysql --default-character-set=utf8 -hyourhost -uyourusername -p
+mysql --default-character-set=utf8mb4 -hyourhost -uyourusername -p
 ```
