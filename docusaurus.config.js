@@ -12,6 +12,10 @@ module.exports = {
     locales: ['zh-CN']
   },
   themeConfig: {
+    metadata: [{
+      name: 'keywords',
+      content: 'docker, golang, javascirpt, k8s, kubernetes, mysql, node.js, react'
+    }],
     hideableSidebar: true,
     algolia: {
       appId: '9IONV53BRI',
