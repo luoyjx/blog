@@ -37,12 +37,12 @@ module.exports = {
       items: [
         {to: 'blog', label: 'Blog', position: 'right'},
         {
-          label: '标签',
+          label: 'Tags',
           to: 'blog/tags',
           position: 'right',
         },
         {
-          label: '归档',
+          label: 'Archive',
           to: 'blog/archive',
           position: 'right',
         },
