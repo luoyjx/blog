@@ -26,7 +26,7 @@ tags: [go ,generics]
 #### 枚举
 - 定义 `func B[V int64 | float64](m, n V) V {}`
 - 使用 `B[int64](123, 456)`
-
+<!--truncate-->
 ``` go
 func bar[K comparable, V int64 | float64](m map[K]V) V {
   // do something...
