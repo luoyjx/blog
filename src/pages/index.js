@@ -75,7 +75,7 @@ function Home() {
                 styles.getStarted,
               )}
               to={useBaseUrl('blog')}>
-              传送门
+              看看文章
             </Link>
           </div>
         </div>

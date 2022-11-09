@@ -1,6 +1,6 @@
 module.exports = {
   title: '演技熊的随想',
-  tagline: 'Hi there 👋',
+  tagline: 'Hi there 👋 这里分享一些技术经验、学习总结、踩过的坑、生活感悟等等',
   url: 'https://blognew.gaoqixhb.com',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
@@ -37,20 +37,20 @@ module.exports = {
       items: [
         {to: 'blog', label: 'Blog', position: 'right'},
         {
-          label: 'Tags',
-          to: 'blog/tags',
-          position: 'right',
+          type: "doc",
+          docId: "hello",
+          position: "right",
+          label: "分享",
         },
         {
-          label: 'Archive',
+          label: '所有文章',
           to: 'blog/archive',
           position: 'right',
         },
         {
-          type: "doc",
-          docId: "hello",
-          position: "right",
-          label: "Notes",
+          label: '标签',
+          to: 'blog/tags',
+          position: 'right',
         },
         {
           href: 'https://github.com/luoyjx',
