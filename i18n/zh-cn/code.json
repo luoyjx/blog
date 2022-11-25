@@ -20,11 +20,11 @@
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.blog.archive.title": {
-    "message": "Archive",
+    "message": "所有文章",
     "description": "The page & hero title of the blog archive page"
   },
   "theme.blog.archive.description": {
-    "message": "Archive",
+    "message": "这里是所有过往的文章的列表",
     "description": "The page & hero description of the blog archive page"
   },
   "theme.BackToTopButton.buttonAriaLabel": {

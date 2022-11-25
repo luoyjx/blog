@@ -16,7 +16,11 @@ module.exports = {
       name: 'keywords',
       content: 'docker, golang, javascirpt, k8s, kubernetes, mysql, node.js, react'
     }],
-    hideableSidebar: true,
+    docs: {
+      sidebar: {
+        hideable: true
+      }
+    },
     algolia: {
       appId: '9IONV53BRI',
       apiKey: 'db22115ab7932c062bdba64ca76ea717',
@@ -35,12 +39,12 @@ module.exports = {
       //   src: 'img/gaoqi_blog_logo.png',
       // },
       items: [
-        {to: 'blog', label: 'Blog', position: 'right'},
+        {to: 'blog', label: '文章', position: 'left'},
         {
           type: "doc",
           docId: "hello",
-          position: "right",
-          label: "分享",
+          position: "left",
+          label: "笔记归类",
         },
         {
           label: '所有文章',
