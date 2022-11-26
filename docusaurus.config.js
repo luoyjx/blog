@@ -113,11 +113,11 @@ module.exports = {
         },
         blog: {
           blogSidebarTitle: '全部博文',
-          blogSidebarCount: 5,
-          postsPerPage: 20,
+          blogSidebarCount: 0,
+          postsPerPage: 10,
           showReadingTime: true,
           readingTime: ({content, frontMatter, defaultReadingTime}) =>
-            defaultReadingTime({content, options: {wordsPerMinute: 300}}),
+            defaultReadingTime({content, options: {wordsPerMinute: 100}}),
           path: './blog',
         },
         theme: {

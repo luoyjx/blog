@@ -65,7 +65,7 @@ function Home() {
         <div className="container">
           <h1 className="hero__title">
             {/* {siteConfig.title} */}
-            Hungry & Foolish
+            Stay Foolish Stay Hungry
           </h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
