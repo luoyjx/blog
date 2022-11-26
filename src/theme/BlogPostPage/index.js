@@ -1,5 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {HtmlClassNameProvider, ThemeClassNames} from '@docusaurus/theme-common';
 import {BlogPostProvider, useBlogPost} from '@docusaurus/theme-common/internal';
 import BlogLayout from '@theme/BlogLayout';
@@ -10,7 +12,7 @@ import TOC from '@theme/TOC';
 import 'gitalk/dist/gitalk.css';
 import GitalkComponent from "gitalk/dist/gitalk-component";
 
-function BlogPostPageContent({sidebar, children}) {
+function BlogPostPageContent({sidebar, children, customFields}) {
   const {metadata, toc} = useBlogPost();
   const {nextItem, prevItem, frontMatter} = metadata;
   const {
@@ -35,19 +37,25 @@ function BlogPostPageContent({sidebar, children}) {
       {(nextItem || prevItem) && (
         <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
       )}
-      <GitalkComponent options={{
-        clientID: '0f5dbf1736e134606ebb',
-        clientSecret: '1e6254477406b32901efc0ea59243079563da4c5',
-        repo: 'blog',      // The repository of store comments,
-        owner: 'luoyjx',
-        admin: ['luoyjx'],
-        id: location.pathname,      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false
-      }} />
+      <BrowserOnly>
+        {
+          () =>
+            <GitalkComponent options={{
+              clientID: customFields.gitalk.clientId,
+              clientSecret: customFields.gitalk.clientSecret,
+              repo: customFields.gitalk.repo,
+              owner: customFields.gitalk.owner,
+              admin: customFields.gitalk.admin,
+              id: location.pathname,      // Ensure uniqueness and length less than 50
+              distractionFreeMode: false
+            }} />
+        }
+      </BrowserOnly>
     </BlogLayout>
   );
 }
 export default function BlogPostPage(props) {
+  const {siteConfig: {customFields}} = useDocusaurusContext();
   const BlogPostContent = props.content;
   return (
     <BlogPostProvider content={props.content} isBlogPostPage>
@@ -57,7 +65,7 @@ export default function BlogPostPage(props) {
           ThemeClassNames.page.blogPostPage,
         )}>
         <BlogPostPageMetadata />
-        <BlogPostPageContent sidebar={props.sidebar}>
+        <BlogPostPageContent sidebar={props.sidebar} customFields={customFields}>
           <BlogPostContent />
         </BlogPostPageContent>
       </HtmlClassNameProvider>

@@ -7,6 +7,16 @@ module.exports = {
   organizationName: '', // Usually your GitHub org/user name.
   projectName: 'blog', // Usually your repo name.
   onBrokenLinks: 'ignore',
+  customFields: {
+    // Put your custom environment here
+    gitalk: {
+      clientId: process.env.GITALK_ID,
+      clientSecret: process.env.GITALK_SECRET,
+      repo: 'blog',
+      owner: 'luoyjx',
+      admin: ['luoyjx'],
+    },
+  },
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['zh-CN']
