@@ -116,7 +116,7 @@ It is suggested that the LANG environment variable be set system-wide if this is
 我使用的是 zsh，所以我是在 `~/.zshrc` 中添加了如下一行。
 
 ```bash
-help='LANG=zh tldr'
+alias help='LANG=zh tldr'
 ```
 
 然后执行 `source ~/.zshrc` 使其生效。
