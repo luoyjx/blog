@@ -16,7 +16,7 @@ tags: [ai, aigc, ChatGPT, OpenAI, Generative AI]
 - 🤖 生成式 AI 可以生成高质量的文本、图像和音频。
 - 📈 生成式 AI 使许多 AI 应用更容易构建，可能帮助企业降低成本并创造更多价值。
 - 📣 课程将介绍生成式 AI 的工作原理，讨论常见用例，以及如何负责任地应用 AI。
-
+<!--truncate-->
 ## 0x01 原理和指南
 
 [YouTube 视频](https://www.youtube.com/watch?v=3Ta7pk1_M3A&list=PLiuLMb-dLdWJMRhdRVc1WsnQ7PmLPpqmB&index=4)
