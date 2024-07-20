@@ -38,8 +38,8 @@ module.exports = {
     },
     prism: {
       additionalLanguages: ['java', 'php'],
-      theme: require('prism-react-renderer/themes/github'),
-      darkTheme: require('prism-react-renderer/themes/dracula'),
+      // theme: require('prism-react-renderer/themes/github'),
+      // darkTheme: require('prism-react-renderer/themes/dracula'),
     },
     navbar: {
       hideOnScroll: true,
@@ -122,8 +122,8 @@ module.exports = {
           sidebarPath: require.resolve("./sidebars.js"),
         },
         blog: {
-          blogSidebarTitle: '全部博文',
-          blogSidebarCount: 0,
+          blogSidebarTitle: '最近文章',
+          blogSidebarCount: 10,
           postsPerPage: 10,
           showReadingTime: true,
           readingTime: ({content, frontMatter, defaultReadingTime}) =>

@@ -23,7 +23,7 @@ tags: [javascript]
   看看 2014 年感动中国十大人物  2014-12-27 12:28
 
   这几个结果中，相信一般的老百姓大都会从第一个开始点吧，不多说废话了，看看 Javascript 代码如何实现的：
-
+```javascript
     function hommizationTime(dateTimeStamp){
         var result;
         var minute = 1000 * 60;
@@ -60,5 +60,5 @@ tags: [javascript]
             result=" 刚刚发表 ";
         return result;
     }
-
+```
 原理就是根据不同的时间单位用当前和发表时的时间差来相除，看，是不是 so easy！

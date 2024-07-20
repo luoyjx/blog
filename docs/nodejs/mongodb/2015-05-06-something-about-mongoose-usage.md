@@ -14,7 +14,7 @@ mongodb 是文档型的数据库，一条记录是以文档为最小单位，而
 
 > option: toObject
 	Documents have a toObject method which converts the mongoose document into a plain javascript object. This method accepts a few options. Instead of applying these options on a per-document basis we may declare the options here and have it applied to all of this schemas documents by default.
-	To have all virtuals show up in your console.log output, set the toObject option to { getters: true }:
+	To have all virtuals show up in your console.log output, set the toObject option to `{ getters: true }`:
 
 我的解决方案是：
 

@@ -17,7 +17,11 @@ addEventListener 的使用方式：
 * `target`： 文档节点、document、window 或 XMLHttpRequest。
 * `type`： 字符串，事件名称，不含“on”，比如“click”、“mouseover”、“keydown”等。
 * `listener` ：实现了 EventListener 接口或者是 JavaScript 中的函数。
-* `useCapture` ：是否使用捕捉，一般用 false 。例如：document.getElementById("testText").addEventListener("keydown", function (event) { alert(event.keyCode); }, false);
+* `useCapture` ：是否使用捕捉，一般用 false 。
+例如：
+```js
+document.getElementById("testText").addEventListener("keydown", function (event) { alert(event.keyCode); }, false);
+```
 
 ### 栗子
 
