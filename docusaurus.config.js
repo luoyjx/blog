@@ -1,5 +1,5 @@
 module.exports = {
-  title: '演技熊的随想',
+  title: 'luoyjx\'s notes',
   tagline: 'Hi there 👋 这里分享一些技术经验、学习总结、踩过的坑、生活感悟等等',
   url: 'https://blognew.gaoqixhb.com',
   baseUrl: '/',
